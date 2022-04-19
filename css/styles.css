@@ -1,0 +1,112 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+html {
+    font-size: 20px;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+/* Menu burger */
+
+#burger {
+    position: fixed;
+    top: .5rem;
+    padding: 1rem;
+    z-index: 1;
+    cursor: pointer;
+}
+
+
+#burger .barra {
+    background-color: #474747;
+    height: 6px;
+    width: 35px;
+    margin: .2rem;
+    transition: 500ms all ease-in-out;
+}
+
+#burger.abierto .barra {
+    background-color: white;
+}
+
+#burger.abierto .barra.superior{
+    transform: translateY(8px) rotateZ(45deg);
+    width: 25px;
+}
+
+#burger.abierto .barra.medio{
+    width: 0;
+}
+
+#burger.abierto .barra.inferior{
+    transform: translateY(-12px) rotateZ(-45deg);
+    width: 25px;
+}
+
+.menu {
+    background-color: #474747;
+    height: 100vh;
+    width: 360px;
+    position: fixed;
+    padding-top: 40px;
+    top: 0;
+    left: -360px;
+    transition: 500ms all ease-in-out;
+    z-index: 0;
+}
+
+.menu.abierto {
+    left: 0px;
+}
+
+.menu nav {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.menu nav a {
+    color: rgba(255, 255, 255, 0.61);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.61);
+    padding: .5rem 0;
+    margin-top: 1.5rem;
+    font-weight: bold;
+    transition: 400ms all ease-in-out;
+}
+
+header {
+    background-color: white;
+    box-shadow: 2px 2px 4px grey;
+    height: 80px;
+    width: 100%;
+    padding: 1rem;
+}
+
+.menu nav a:hover {
+    color: white;
+    border-color: white;
+    
+}
+
+.circle {
+    padding: .3rem;
+    border: 2px solid white;
+}
+
+/* @media (max-width: 440px) {
+    .burger {
+        display: block;
+    }
+} */
